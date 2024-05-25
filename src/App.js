@@ -1,12 +1,24 @@
 import { useState } from 'react'
-import './App.css'
-import { BrowserRouter as Router, RouterProvider, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
+import Home from './pages/home/Home'
+import Contact from './pages/contact/Contact'
 
 function App() {
 
   return (
     <div className="App">
-      Hello 
+      <BrowserRouter>
+        <Header/>
+          <Routes>
+            <Route path='/' element = {<Home/>}/>
+            <Route path='/contact' element = {<Contact/>}/>
+          
+          </Routes>
+
+        <Footer/>
+      </BrowserRouter> 
     </div>
   )
 }
