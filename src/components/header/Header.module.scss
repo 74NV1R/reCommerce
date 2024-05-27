@@ -20,18 +20,39 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      text-decoration: none;
       position: relative;
     }
-  
-    .logo a h2 {
+
+/*     .logo a h2 {
       width: 25%;
       color: red;
       cursor: pointer;
       text-decoration: none;
       span {
         color: white;
+        text-decoration: none;
+      }
+    } */
+
+    .logo a {
+      text-decoration: none;
+    
+      h2 {
+        width: 25%;
+        color: red;
+        &:hover{
+          color: #fff;
+        }
+        cursor: pointer;
+        
+        span {
+          color: white;
+          text-decoration: none;
+        }
       }
     }
+    
   
     nav {
       width: 75%;
@@ -67,19 +88,22 @@
       .cart a {
         display: flex;
         color: red;
-        text-decoration: none;
-        position: relative;
         &:hover {
           color: #fff;
         }
         &.active {
           color: var(--color-danger);
         }
+        text-decoration: none;
+        position: relative;
+        
         p {
+          color: red;
           position: absolute;
           top: -1rem;
           right: -1rem;
           font-weight: 500;
+          font-size: 0.75em; 
         }
       }
   
@@ -106,7 +130,7 @@
   
     .menu-icon {
       cursor: pointer;
-      display: none;
+      display: flex;
     }
   
     @media screen and (max-width: 800px) {
@@ -117,7 +141,7 @@
         left: 0;
         width: 50%;
         height: 100vh;
-        background-color: var(--dark-blue);
+        background-color: black;
         padding: 1rem;
         z-index: 999;
         transform: translateX(-200%);
@@ -190,10 +214,10 @@
         padding: 5px 0;
         // border-bottom: 1px solid #333;
         a {
-          color: #fff;
+          color: red;
           position: relative;
           &:hover {
-            color: orangered;
+            color: #fff;
           }
           p {
             position: absolute;

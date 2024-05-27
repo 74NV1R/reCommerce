@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import {Home, Contact} from './pages'
 import { Header, Footer } from './components'
