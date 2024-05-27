@@ -8,12 +8,12 @@
   
   header {
     width: 100%;
-    background-color: var(--dark-blue);
+    background-color: #000;
     color: #fff;
   
     .header {
       width: 100%;
-      height: 8rem;
+      height: 4rem;
       max-width: 1000px;
       margin: 0 auto;
       padding: 1rem;
@@ -25,10 +25,11 @@
   
     .logo a h2 {
       width: 25%;
-      color: #fff;
+      color: red;
       cursor: pointer;
+      text-decoration: none;
       span {
-        color: orangered;
+        color: white;
       }
     }
   
@@ -40,6 +41,7 @@
         display: flex;
         justify-content: space-between;
         list-style: none;
+
   
         .logo-mobile {
           display: none;
@@ -47,11 +49,13 @@
   
         li {
           margin: 0 5px;
+
           a {
-            color: #fff;
+            color: red;
             &:hover {
-              color: orangered;
+              color: #fff;
             }
+            text-decoration: none;
           }
         }
       }
@@ -62,10 +66,11 @@
   
       .cart a {
         display: flex;
-        color: #fff;
+        color: red;
+        text-decoration: none;
         position: relative;
         &:hover {
-          color: orangered;
+          color: #fff;
         }
         &.active {
           color: var(--color-danger);
@@ -88,9 +93,10 @@
   
       .links a {
         margin: 0 5px;
-        color: #fff;
+        color: red;
+        text-decoration: none;
         &:hover {
-          color: orangered;
+          color: #fff;
         }
         &.active {
           color: var(--color-danger);
