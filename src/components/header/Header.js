@@ -45,6 +45,9 @@ const Header = () => {
       <div className={styles.header}>
         {logo}
         <nav>
+          <div>
+
+
           <ul>
             <li>
               <Link to='/home'>Home</Link>
@@ -63,6 +66,7 @@ const Header = () => {
             {basket}
           </div>
         </nav>
+        </div>
 
         <div className={styles["menu-icon"]}>
           {basket}
