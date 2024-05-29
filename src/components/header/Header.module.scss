@@ -131,6 +131,11 @@
     .menu-icon {
       cursor: pointer;
       display: flex;
+      .a {
+        text-decoration: none;
+      }
+
+
     }
   
     @media screen and (max-width: 800px) {
@@ -177,6 +182,7 @@
             border-bottom: 1px solid #333;
             a {
               display: block;
+              
             }
           }
         }

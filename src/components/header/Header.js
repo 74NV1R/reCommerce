@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Header.module.scss'
 import { Link } from 'react-router-dom'
-import { GiSaddle  } from "react-icons/gi"
 import { CgMenuRound } from "react-icons/cg"
+import { RiShoppingBasketLine } from "react-icons/ri"
 
 const logo = (
   <div className={styles.logo}>
@@ -15,11 +15,11 @@ const logo = (
 </div>
 )
 
-const saddlebag = (
+const basket = (
 <span className={styles.cart}>
               <Link to='/cart'>
-                My Saddlebag 
-                <GiSaddle  size={30} />
+                Basket 
+                <RiShoppingBasketLine   size={30} />
                 <p>0</p>
               </Link>
 
@@ -28,6 +28,17 @@ const saddlebag = (
 )
 
 const Header = () => {
+
+  const [showMenu, setShowMenu] = useState(false)
+
+  const toggleMenu = () =>{
+    setShowMenu(!setShowMenu)
+  }
+
+  const hideMenu = () =>{
+    setShowMenu(false)
+  }
+
   return (
     <header>
       <div className='col-12'>
@@ -49,13 +60,13 @@ const Header = () => {
               <Link to="/register">Sign up</Link>
               <Link to="/order-history">My Orders</Link>
             </span>
-            {saddlebag}
+            {basket}
           </div>
         </nav>
 
         <div className={styles["menu-icon"]}>
-          {saddlebag}
-          <CgMenuRound size = {30}/>
+          {basket}
+          <CgMenuRound color='red' size = {30}/>
 
         </div>
       </div>
